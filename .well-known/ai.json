@@ -1,0 +1,133 @@
+{
+  "protocol_version": "ADP v3.0",
+  "skills": [
+    {
+      "name": "registerUser",
+      "method": "POST",
+      "url_path": "/api/users/register",
+      "parameters": [
+        "name",
+        "email",
+        "password",
+        "confirmPassword"
+      ],
+      "requires_auth": false
+    },
+    {
+      "name": "loginUser",
+      "method": "POST",
+      "url_path": "/api/users/login",
+      "parameters": [
+        "email",
+        "password"
+      ],
+      "requires_auth": false
+    },
+    {
+      "name": "getUser",
+      "method": "GET",
+      "url_path": "/api/users/:id",
+      "parameters": [
+        "id"
+      ],
+      "requires_auth": false
+    },
+    {
+      "name": "getUsers",
+      "method": "GET",
+      "url_path": "/api/users/",
+      "parameters": [],
+      "requires_auth": false
+    },
+    {
+      "name": "changeAvatar",
+      "method": "POST",
+      "url_path": "/api/users/change-avatar",
+      "parameters": [
+        "avatar"
+      ],
+      "requires_auth": true
+    },
+    {
+      "name": "editUser",
+      "method": "PATCH",
+      "url_path": "/api/users/edit-user",
+      "parameters": [
+        "name",
+        "email",
+        "currentPassword",
+        "newPassword",
+        "confirmNewPassword"
+      ],
+      "requires_auth": true
+    },
+    {
+      "name": "createPost",
+      "method": "POST",
+      "url_path": "/api/posts/",
+      "parameters": [
+        "title",
+        "category",
+        "description",
+        "thumbnail"
+      ],
+      "requires_auth": true
+    },
+    {
+      "name": "getPosts",
+      "method": "GET",
+      "url_path": "/api/posts/",
+      "parameters": [],
+      "requires_auth": false
+    },
+    {
+      "name": "getPost",
+      "method": "GET",
+      "url_path": "/api/posts/:id",
+      "parameters": [
+        "id"
+      ],
+      "requires_auth": false
+    },
+    {
+      "name": "getCatPosts",
+      "method": "GET",
+      "url_path": "/api/posts/categories/:category",
+      "parameters": [
+        "category"
+      ],
+      "requires_auth": false
+    },
+    {
+      "name": "getUserPosts",
+      "method": "GET",
+      "url_path": "/api/posts/users/:id",
+      "parameters": [
+        "id"
+      ],
+      "requires_auth": false
+    },
+    {
+      "name": "editPost",
+      "method": "PATCH",
+      "url_path": "/api/posts/:id",
+      "parameters": [
+        "id",
+        "title",
+        "category",
+        "description",
+        "thumbnail"
+      ],
+      "requires_auth": true
+    },
+    {
+      "name": "deletePost",
+      "method": "DELETE",
+      "url_path": "/api/posts/:id",
+      "parameters": [
+        "id"
+      ],
+      "requires_auth": true
+    }
+  ]
+}

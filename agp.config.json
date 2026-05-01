@@ -1,0 +1,70 @@
+{
+  "target_base": "http://localhost:5000",
+  "mappings": {
+    "registerUser": {
+      "method": "POST",
+      "path": "/api/users/register",
+      "requires_auth": false
+    },
+    "loginUser": {
+      "method": "POST",
+      "path": "/api/users/login",
+      "requires_auth": false
+    },
+    "getUser": {
+      "method": "GET",
+      "path": "/api/users/:id",
+      "requires_auth": false
+    },
+    "getUsers": {
+      "method": "GET",
+      "path": "/api/users/",
+      "requires_auth": false
+    },
+    "changeAvatar": {
+      "method": "POST",
+      "path": "/api/users/change-avatar",
+      "requires_auth": true
+    },
+    "editUser": {
+      "method": "PATCH",
+      "path": "/api/users/edit-user",
+      "requires_auth": true
+    },
+    "createPost": {
+      "method": "POST",
+      "path": "/api/posts/",
+      "requires_auth": true
+    },
+    "getPosts": {
+      "method": "GET",
+      "path": "/api/posts/",
+      "requires_auth": false
+    },
+    "getPost": {
+      "method": "GET",
+      "path": "/api/posts/:id",
+      "requires_auth": false
+    },
+    "getCatPosts": {
+      "method": "GET",
+      "path": "/api/posts/categories/:category",
+      "requires_auth": false
+    },
+    "getUserPosts": {
+      "method": "GET",
+      "path": "/api/posts/users/:id",
+      "requires_auth": false
+    },
+    "editPost": {
+      "method": "PATCH",
+      "path": "/api/posts/:id",
+      "requires_auth": true
+    },
+    "deletePost": {
+      "method": "DELETE",
+      "path": "/api/posts/:id",
+      "requires_auth": true
+    }
+  }
+}
